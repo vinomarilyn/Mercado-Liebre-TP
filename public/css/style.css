@@ -70,7 +70,6 @@ header {
     
 
 }
-
 .payment-header{
     display: flex;
     justify-content: center;
@@ -115,20 +114,53 @@ main{
 }
 .titulo-main{
     font-size: 24px;
+    font-weight: 400;
 }
 
 .descripcion-main {
     font-size: 18px;
+    background-color: #fff;
+    
 
 }
+.descripcion-main p{
+    display: inline;
+    width: 30%;
 
+}
 .descripcion-main p:nth-of-type(2){
     font-size: 16px;
+    width: 70%;
+    color: var(--verde);
 }
 
-.titulo-main h5{
+.descripcion-main i{
+    display: block;
     font-size: 16px;
+    border: 1px solid var(--verde);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius:  50%;
+    background-color: #fff;
+    color: var(--verde);
+
+   /*position: absolute;right: 20px; top: -15px;*/
 }
+
+.descripcion-main h5{
+    color: var(--gris-oscuro);
+    font-size: 16px;
+    font-weight: 400;
+}
+.descripcion-main img{
+    border-bottom:1px  var(--gris-claro) solid ;
+
+}
+.descripcion-main hr{
+    color: var(--gris-oscuro);
+}
+
 .footer-general{
     display: flex;
     flex-direction: column;
@@ -161,5 +193,36 @@ main{
 .footer-article p{
     width: 250px;
     height: 55px;
+
+}
+ /*mobiel*/
+ @media (min-width: 320px){
+    section{
+        width: 100%;
+    }
+    .descripcion-main{
+        margin: 5px;
+    }
+
+
+}
+ /*tabletdisplay: flexbox;
+        align-content: space-around;*/
+@media (min-width: 480px){
+    .descripcion-main {
+        width: 40%;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
+        display: inline-block;
+        
+    }
+
+}
+/*desktop*/
+@media (min-width: 760px){
+    .descripcion-main {
+        width: 20%;
+        
+    }
+
 
 }
