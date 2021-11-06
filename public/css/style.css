@@ -70,9 +70,6 @@ header {
     
 
 }
-.buscador-header i{
-    
-}
 
 .payment-header{
     display: flex;
@@ -113,6 +110,9 @@ header {
 
 }
 
+main{
+    background-color: var(--gris-claro);
+}
 .titulo-main{
     font-size: 24px;
 }
@@ -128,4 +128,38 @@ header {
 
 .titulo-main h5{
     font-size: 16px;
+}
+.footer-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.footer-sub-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-article i {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--celeste);
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+.footer-article h3{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-article p{
+    width: 250px;
+    height: 55px;
+
 }
