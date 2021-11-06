@@ -1,3 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgba(255, 255, 255, 0.979);
+} 
+
+a {
+    text-decoration: none;
 }
+
+li {
+    list-style: none;
+}
+
+/* variables */
+:root {
+    /* Colors */
+    --amarillo: #EAC926;
+    --azul:  #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+
+    /* Fonts */
+    --fontText: 'Roboto', sans-serif;
+}
+html {
+    font-size: 12px;
+}
+
+header {
+    background-color: var(--amarillo);
+}
+
+.logo-header img{
+     width: 190px;
+     height: 50px;
+     display: flex;
+     align-items: flex-start;
+     padding: 10px 10px;
+
+}
+
+.contenedor-header1 a{
+    color: black;
+}
+
+.contenedor-header2 a{
+    color: black;
+}
+
+.buscador-header{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+
+.contenedor-general-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 15px;
+    
+
+}
+.buscador-header i{
+    
+}
+
+.payment-header{
+    display: flex;
+    justify-content: center;
+}
+
+.buscador-header i{
+    background-color: var(--gris-claro);
+    border: solid black ;
+    border-width:1px;
+    margin-top: 0.5px;
+}
+
+.contenedor-header1{
+    margin-bottom: 25px;
+    margin-top: 15px
+}
+
+.contenedor-header2{
+    margin-bottom: 10px;  
+}
+.icon-header-barra{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.icon-header-barra i{
+    color: var(--gris-claro);
+    width: 25px;
+    height: 25px;
+    border: solid var(--celeste);
+    border-radius: 3px;
+    background-color: var(--celeste);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16p
+*/
