@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fontText);
 }
 
 body {
     background-color: rgba(255, 255, 255, 0.979);
+
 } 
 
 a {
@@ -111,8 +113,19 @@ header {
 
 }
 
-/*Titulares (Basado en tu última visita/Ofertas): 24px
-Precios: 18px
-Descuentos: 16px
-Descripciones: 16p
-*/
+.titulo-main{
+    font-size: 24px;
+}
+
+.descripcion-main {
+    font-size: 18px;
+
+}
+
+.descripcion-main p:nth-of-type(2){
+    font-size: 16px;
+}
+
+.titulo-main h5{
+    font-size: 16px;
+}
