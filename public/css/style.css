@@ -39,15 +39,6 @@ header {
     background-color: var(--amarillo);
 }
 
-.logo-header img{
-     width: 190px;
-     height: 50px;
-     display: flex;
-     align-items: flex-start;
-     padding: 10px 10px;
-
-}
-
 .contenedor-header1 a{
     color: black;
 }
@@ -66,8 +57,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 15px;
-    
 
 }
 .payment-header{
@@ -75,13 +64,12 @@ header {
     justify-content: center;
 }
 
-.buscador-header i{
+.contenedor-general-header i{
     background-color: var(--gris-claro);
     border: solid black ;
-    border-width:1px;
-    margin-top: 0.5px;
-}
+    border-width:1px;  
 
+}
 .contenedor-header1{
     margin-bottom: 25px;
     margin-top: 15px
@@ -195,13 +183,44 @@ main{
     height: 55px;
 
 }
- /*mobiel*/
+ /*mobielpadding-left: 15px;
+        padding-right: 10px;*/
  @media (min-width: 320px){
-    section{
-        width: 100%;
-    }
+     header{
+         height: 170px;
+     }
     .descripcion-main{
         margin: 5px;
+    }
+    .contenedor-general-header img{
+        width: 50%;
+        padding-right: 7px;
+
+    }
+    .contenedor-general-header{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 15px 10px 20px 15px ;
+    }
+    .contenedor-general-header i{
+        background-color: #fff;
+        border: solid #fff ;
+        border-radius:  0px 10px 10px 0px ;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-general-header input{
+        border-radius: 10px  0px  0px 10px;
+        background-color: #fff;
+        width: 40%;
+    }
+    
+    .nav-header{
+        display: none;
     }
 
 
