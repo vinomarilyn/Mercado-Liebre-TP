@@ -78,11 +78,6 @@ header {
 .contenedor-header2{
     margin-bottom: 10px;  
 }
-.icon-header-barra{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 5px;
-}
 
 .icon-header-barra i{
     color: var(--gris-claro);
@@ -183,11 +178,13 @@ main{
     height: 55px;
 
 }
- /*mobielpadding-left: 15px;
-        padding-right: 10px;*/
+ /* mobiel */
  @media (min-width: 320px){
      header{
-         height: 170px;
+        height: 170px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
      }
     .descripcion-main{
         margin: 5px;
@@ -201,47 +198,99 @@ main{
         display: flex;
         flex-direction: row;
         width: 100%;
-        padding: 15px 10px 20px 15px ;
+        padding: 15px 10px 0px 15px ;
     }
     .contenedor-general-header i{
         background-color: #fff;
         border: solid #fff ;
+        color: var(--gris-oscuro);
         border-radius:  0px 10px 10px 0px ;
         width: 10%;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 20px;
     }
 
     .contenedor-general-header input{
         border-radius: 10px  0px  0px 10px;
         background-color: #fff;
         width: 40%;
+        height: 40px;
+        margin-top: 20px;
     }
-    
+    .header-mano{
+        display: inline-flex;
+        justify-content: center;
+        height: 20px;
+    }
+    .icon-header-barra{
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: 25px;
+        left: -130px; 
+
+    }
     .nav-header{
         display: none;
     }
-
-
 }
  /*tabletdisplay: flexbox;
         align-content: space-around;*/
-@media (min-width: 480px){
+@media (min-width: 760px){
     .descripcion-main {
         width: 40%;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
-        display: inline-block;
+        display: inline-block; 
+    }
+    .contenedor-general-header img{
+        width: 30%;
+    }
+    .contenedor-general-header input{
+        width: 25%;
+        height: 20px;
+    }
+    .contenedor-general-header i{
+        width: 15px;
+        background-color:var(--gris-claro); 
+        color: var(--gris-oscuro);
+        border-radius:2px;
+        height: 20px;
+        margin-left: 5px;
+
+    }
+   /* .header-mano{
+        width: 32%;
+        height: 20px;
+        position: relative;
+        left: 220px;
+        top: -70px;
+    }*/
+
+    .nav-header{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
         
+    }
+    .icon-header-barra{
+        display: none;
+    }
+    .contenedor-header1{
+        display: flex;
+        
+        border:solid red;
     }
 
 }
-/*desktop*/
-@media (min-width: 760px){
+/*desktop
+@media (min-width: 1010px){
     .descripcion-main {
         width: 20%;
         
     }
 
 
-}
+}*/
