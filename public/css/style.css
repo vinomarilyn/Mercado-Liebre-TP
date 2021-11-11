@@ -128,7 +128,6 @@ main{
     background-color: #fff;
     color: var(--verde);
 
-   /*position: absolute;right: 20px; top: -15px;*/
 }
 
 .descripcion-main h5{
@@ -181,22 +180,25 @@ main{
  /* mobiel */
  @media (min-width: 320px){
      header{
-        height: 170px;
+        height: 200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
      }
     .descripcion-main{
         margin: 5px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
     }
     .contenedor-general-header img{
         width: 50%;
         padding-right: 7px;
+        height: 100px;
 
     }
     .contenedor-general-header{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         width: 100%;
         padding: 15px 10px 0px 15px ;
     }
@@ -204,7 +206,7 @@ main{
         background-color: #fff;
         border: solid #fff ;
         color: var(--gris-oscuro);
-        border-radius:  0px 10px 10px 0px ;
+        border-radius:  0px 7px 7px 0px ;
         width: 10%;
         height: 40px;
         display: flex;
@@ -214,11 +216,15 @@ main{
     }
 
     .contenedor-general-header input{
-        border-radius: 10px  0px  0px 10px;
+        border-radius: 7px  0px  0px 7px;
         background-color: #fff;
-        width: 40%;
         height: 40px;
+        width: 100%;
         margin-top: 20px;
+    }
+    .buscador-header{
+        flex-direction: row;
+        width: 40%;
     }
     .header-mano{
         display: inline-flex;
@@ -236,10 +242,41 @@ main{
     .nav-header{
         display: none;
     }
+
+    .mano-tablet{
+        display: none;
+    }
 }
  /*tabletdisplay: flexbox;
         align-content: space-around;*/
 @media (min-width: 760px){
+    header{
+        justify-content: space-between;
+        height: 180px;
+    }
+    .mano-tablet{
+        display: flex;
+        width: 35%;
+        height: 20px;
+        margin-top: 45px;
+    }
+    
+    #mano-tablet-icon{
+        background-color: var(--amarillo);
+        color: black;
+        margin-left: 0px;
+        border-radius: none;
+        border:none;
+        margin-top: 0px;
+        align-items: flex-start;
+
+    }
+
+
+    .header-mano{
+        display: none;
+    }
+
     .descripcion-main {
         width: 40%;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
@@ -247,10 +284,17 @@ main{
     }
     .contenedor-general-header img{
         width: 30%;
+        padding-right: 0px;
+        height: 90px;
     }
     .contenedor-general-header input{
-        width: 25%;
+        width: 100%;
         height: 20px;
+    }
+    
+    .buscador-header{
+        width: 25%;
+        margin-top: 22px;
     }
     .contenedor-general-header i{
         width: 15px;
@@ -261,36 +305,56 @@ main{
         margin-left: 5px;
 
     }
-   /* .header-mano{
-        width: 32%;
-        height: 20px;
-        position: relative;
-        left: 220px;
-        top: -70px;
-    }*/
 
-    .nav-header{
+    .nav-header {
         display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        
+        width: 100%;
+        padding: 0px 5px 0px 5px;
+    
     }
+    .nav-header2{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .nav-header ul{
+        display: flex;
+    }
+    .nav-header li{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     .icon-header-barra{
         display: none;
     }
+
     .contenedor-header1{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-right: 15px;
         display: flex;
         
-        border:solid red;
+
+    }
+    .contenedor-header2 {
+        margin-bottom: 0px;
+        margin-left: 15px;
     }
 
+    
+
 }
-/*desktop
+/*desktop*/
 @media (min-width: 1010px){
+    header{
+        height: 150px;
+    }
     .descripcion-main {
         width: 20%;
         
     }
 
 
-}*/
+}
