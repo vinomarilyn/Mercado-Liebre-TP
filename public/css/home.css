@@ -1,0 +1,82 @@
+main{
+    background-color: var(--gris-claro);
+}
+.titulo-main{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.descripcion-main {
+    font-size: 18px;
+    background-color: #fff;
+    
+
+}
+.descripcion-main p{
+    display: inline;
+    width: 30%;
+
+}
+.descripcion-main p:nth-of-type(2){
+    font-size: 16px;
+    width: 70%;
+    color: var(--verde);
+}
+
+.descripcion-main i{
+    display: block;
+    font-size: 16px;
+    border: 1px solid var(--verde);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius:  50%;
+    background-color: #fff;
+    color: var(--verde);
+
+}
+
+.descripcion-main h5{
+    color: var(--gris-oscuro);
+    font-size: 16px;
+    font-weight: 400;
+}
+.descripcion-main img{
+    border-bottom:1px  var(--gris-claro) solid ;
+
+}
+.descripcion-main hr{
+    color: var(--gris-oscuro);
+}
+
+
+ /* mobiel */
+ @media (min-width: 320px){
+
+    .descripcion-main{
+        margin: 5px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
+    }
+
+}
+ /*tablet;*/
+@media (min-width: 760px){
+
+    .descripcion-main {
+        width: 40%;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.70);
+        display: inline-block; 
+    }
+    
+
+}
+/*desktop*/
+@media (min-width: 1010px){
+
+    .descripcion-main {
+        width: 20%;
+        
+    }
+
+
+}
