@@ -124,7 +124,7 @@ header {
 
 
 }
-
+ /*TABLET*/
 @media (min-width: 760px){
 
     header{
@@ -216,7 +216,7 @@ header {
     }
 
 }
-
+ /*DESKTOP*/
 @media (min-width: 1010px){
     header{
         height: 150px;

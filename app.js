@@ -1,17 +1,29 @@
+// Modulos
 const express = require('express');
-const app = express();
-const PORT = 3000;
 let path = require('path')
+const app = express();
 
-//middlewares
-app.use(express.static('public'))
+const PORT = 3000;
 
-//rutas
-app.get('/', function (req, res){
-    res.sendFile(path.join(__dirname,'/views/home.html'))
-})
 
+//fucion de rutas
+let enviarHTML = (url, archivo) => {
+    app.get(url, (req, res) => {
+        res.sendFile(path.join(__dirname,`./views/${archivo}`))
+
+    })
+}
+
+// ROUTES
+enviarHTML('/','home.html')
+enviarHTML('/login','login.html')
+enviarHTML('/register','register.html')
+
+//Server
 app.listen(PORT, ()=>  console.log(`
 servidor escuchando en el puerto ${PORT}
 http://localhost:${PORT}
-`))
+`));
+
+//middlewares
+app.use(express.static('public'));
