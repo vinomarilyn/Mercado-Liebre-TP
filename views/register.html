@@ -91,10 +91,17 @@
                   </div>
 
                      <div class="perfil-usuario">
+
+                          <div class="perfil-usuario-div">
                          <label for="cv">Comprador</label>
                              <input type="radio" name="cv" value="c"> 
+                            </div>
+
+                            <div class="perfil-usuario-div">
                          <label for="cv">Vendedor</label>
                              <input type="radio" name="cv" value="v">
+                            </div>
+
                      </div> 
 
                      <div class="h3-register">
@@ -102,18 +109,34 @@
                      </div>
                         <div class="input-categorias">
                         <ul class="li-categorias">  
-                           <li><input class="input-categorias-register" type="checkbox" name="categoria" value="1" id="">Electro</li>
-                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="2" id="">Moda</li>
-                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="3" id="">Hogar</li>
-                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="4" id="">Juguetería</li>
-                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="5" id="">Vida sana</li>
+                            <div class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="1" id=""><li>Electro</li>
+                           </div>
+                           
+                           <div class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="2" id=""> <li>Moda</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="3" id=""> <li>Hogar</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="4" id=""> <li>Juguetería</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                            <input class="input-categorias-register" type="checkbox" name="categoria" value="5" id=""><li>Vida sana</li>
+                           </div>
+
                         </ul>
                          </div>
 
                               <div class="foto-usuario-register">
                                 <i class="fas fa-user-edit"></i>
                               </div>
-
+                             
+                              <div class="input-register-2">
                              
                      <input class="input-register" type="password"  name="pass" id="pass" placeholder="Contraseña" required >
                      <span class="error-message-register">Debes ingresar una contraseña</span>
@@ -121,6 +144,8 @@
                      <input class="input-register" type="password"  name="pass" id="pass" placeholder="Confirmar contraseña" required >
                      <span class="error-message-register">Debes confirmar tu contraseña</span>
                       
+                              </div>
+                              
                             <div class="enviar-register">
                                   <button type="submit" value="enviar" class="registrarse">
                                       <a href="/">Registrarse</a> 

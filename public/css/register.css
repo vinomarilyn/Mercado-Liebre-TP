@@ -1,15 +1,14 @@
 /*cuerpo principal (main)*/
 .main-register{
-
+    width: 100%;
 
 }
 
 /*caja principal del register*/
 .caja-1{
-    height:1050px ;
-    border: black solid;
     display: flex;
     flex-direction: column;
+  
 }
 /*span invisible*/
 .error-message-register{
@@ -64,25 +63,109 @@
  /*Perfil de usuario comprador/vendedor */
 .perfil-usuario{
     width: 90%;
-
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 10px 10px 10px;
+}
+.perfil-usuario-div{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
-    margin: 10px 10px 10px 10px;
+}
+
+.perfil-usuario-div label{
+    margin-left: 10px;
 }
 /*categoria de interes*/
 .li-categorias{
-    width: 90%; 
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
+.li-categorias-div{
+   display: flex;
+   flex-direction: row;
+   margin: 15px;
+
+}
+.li-categorias-div li{
+    margin-left: 5px;
+
+}
+
 
 .input-categorias{
-  border: solid rgb(255, 228, 110);
   width: 100%; 
   display: flex;  
-  justify-content: space-evenly;
+  justify-content:space-evenly;
 }
-/*espaciado de li*/
 
-.li-categorias li{
-    margin:20px 5px 20px 5px ;
+/*foto de perfil-usuario*/
+.foto-usuario-register{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+
 }
+.foto-usuario-register i{
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    border: 1px solid white;
+    background-color: #fff;
+    color: var(--gris-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+/*contraseña y confirmación*/
+.input-register-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*botones de registro y borrar*/
+.enviar-register{
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     margin: 10px 0px 15px 0px;
+}
+.enviar-register button{
+    border: solid var(--celeste); 
+    width: 90%;
+    height: 32px;
+    background-color: var(--celeste);
+    border-radius: 3px 3px  3px 3px;
+}
+
+.enviar-register .registrarse a{
+    color: white;
+    font-weight: 600;
+}
+
+.borrar-register{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 15px 0px;
+}
+
+.borrar-register button{
+    border: solid var(--celeste); 
+    width: 90%;
+    height: 32px;
+    background-color: var(--celeste);
+    border-radius: 3px 3px  3px 3px;
+    color: white;
+    font-weight: 600;
+}
+
