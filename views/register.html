@@ -58,36 +58,69 @@
      </a>
  </div>
  </header>
-    <main>
-        <form action="" class="formulario" id="formulario">
-            
+ <main class="main-register">
+    <form action="">
+      <div class="">
+         
+               <div class="caja-1">
 
-        </form>
-        
-        
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, unde illum quos et, sit accusantium dolor, dolores autem magni eos delectus nulla quisquam hic quis aut? Illum excepturi iure fuga?</p>
-    
-        
-            <!--Nombre y apellido caja 1
-■Nombre de usuari@ caja 2
-■Fecha de nacimiento caja 3
-■Domicilio caja 4
-■Perfil del usuario (consultar a l@s usuari@s si quieren comprar o vender) opcion a o b
-■Categorías de interés (puede elegir más de una) selectores 
-●Electro
-●Moda
-●Hogar
-●Juguetería
-●Vida sana
-■Foto de usuario
-■Contraseña
-■Confirmar contraseña
-■Botón de enviar que nos lleve a la página principal caja 5 
-■Botón de borrar todos los datos del formulario caja 6
--->
-        
-    </main>
+                  <input class="input-register" type="text" name="nombre" id="name" placeholder="Nombre y apellido" required >
+                  <span class="error-message-register">Debes ingresar tu nombre y apellido</span>
+      
+                  <input class="input-register" type="text" name="usuario" id="name" placeholder="Nombre de usuario" required >
+                  <span class="error-message-register">Debes ingresar un nombre de usuario</span>
+                 
+                  <input class="input-register" type="email" name="email" id="email" placeholder="E-mail"  required >
+                  <span class="error-message-register">Debes ingresar tu email</span>
+
+                  <h3>Fecha de nacimiento</h3>
+                  
+                  <input class="input-register" type="date" name="nacimiento" min="1900" placeholder="mm/dd/yyyy"  required>
+                  <span class="error-message-register">Debes ingresar tu fecha de nacimien</span>
+                   
+                  <input class="input-register" type="text" name="nombre" id="name" placeholder="Domicilio" required >
+                  <span class="error-message-register">Debes ingresar tu domicilio</span>
+                  
+                  <h3>Perfil de usuario</h3>
+                     <div class="perfil-usuario">
+                         <label for="cv">Comprador</label>
+                             <input type="radio" name="cv" value="c"> 
+                         <label for="cv">Vendedor</label>
+                             <input type="radio" name="cv" value="v">
+                     </div> 
+                     
+                        <ul>
+                            <h3>Categorías de interés (puede elegir más de una)</h3>
+                           <li><input type="checkbox" name="categoria" value="1" id="">Electro</li>
+                            <li><input type="checkbox" name="categoria" value="2" id="">Moda</li>
+                            <li><input type="checkbox" name="categoria" value="3" id="">Hogar</li>
+                            <li><input type="checkbox" name="categoria" value="4" id="">Juguetería</li>
+                            <li><input type="checkbox" name="categoria" value="5" id="">Vida sana</li>
+                        </ul>
+
+                              <div class="foto-usuario-register">
+                                <i class="fas fa-user-edit"></i>
+                              </div>
+
+                             
+                     <input class="input-register" type="password"  name="pass" id="pass" placeholder="Contraseña" required >
+                     <span class="error-message-register">Debes ingresar una contraseña</span>
+
+                     <input class="input-register" type="password"  name="pass" id="pass" placeholder="Confirmar contraseña" required >
+                     <span class="error-message-register">Debes confirmar tu contraseña</span>
+                      
+                            <div class="enviar-register">
+                                  <button type="submit" value="enviar" class="registrarse">
+                                      <a href="/">Registrarse</a> 
+                                 </button>
+                            </div>
+       
+                               <div class="borrar-register">
+                              <button type="reset" value="Borrar" class="registrarse">Borrar</button>
+                               </div>
+     </div>
+   </form>
+  </main>
 
         <foote class="footer-general">
             <div class="footer-sub-general">
