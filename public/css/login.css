@@ -1,0 +1,76 @@
+/*cuerpo principal (main)*/
+.main-register{
+    width: 100%;
+
+}
+
+/*caja principal del register */
+.login-caja-1{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.login-caja-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*span invisible*/
+.error-message-login{
+    display: none;
+}
+
+/*letras de inputs*/
+.input-login{
+    color: var(--gris-oscuro);
+    font-weight: bold;
+    width: 90%;
+    height: 32px;
+    margin: 20px 0px 15px 0px;
+    border: solid white;
+    border-radius: 5px 5px  5px 5px;
+
+}
+/*h3 titulos*/
+.caja-1 h3{
+    font-size: 16px;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 90%;
+}
+.h3-register{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+/*sub caja de inputs*/
+.input-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*botones de registro y borrar*/
+.enviar-login{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 15px 0px;
+}
+.enviar-login button{
+   border: solid var(--celeste); 
+   width: 90%;
+   height: 32px;
+   background-color: var(--celeste);
+   border-radius: 3px 3px  3px 3px;
+}
+
+.enviar-login .login-enviar a{
+   color: white;
+   font-weight: 600;
+}
