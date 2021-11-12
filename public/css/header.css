@@ -161,21 +161,12 @@ header {
     }
     .contenedor-general-header input{
         width: 100%;
-        height: 20px;
+       
     }
 
     .buscador-header{
         width: 25%;
-        margin-top: 22px;
-    }
-    .contenedor-general-header i{
-        width: 15px;
-        background-color:var(--gris-claro); 
-        color: var(--gris-oscuro);
-        border-radius:2px;
-        height: 20px;
-        margin-left: 5px;
-
+        margin-top: 15px;
     }
 
     .nav-header {

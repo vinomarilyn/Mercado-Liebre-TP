@@ -59,10 +59,10 @@
  </div>
  </header>
  <main class="main-register">
-    <form action="">
-      <div class="">
+         <form action="">
          
                <div class="caja-1">
+                   <div class="input-general">
 
                   <input class="input-register" type="text" name="nombre" id="name" placeholder="Nombre y apellido" required >
                   <span class="error-message-register">Debes ingresar tu nombre y apellido</span>
@@ -73,30 +73,42 @@
                   <input class="input-register" type="email" name="email" id="email" placeholder="E-mail"  required >
                   <span class="error-message-register">Debes ingresar tu email</span>
 
+                  <div class="h3-register">
                   <h3>Fecha de nacimiento</h3>
-                  
-                  <input class="input-register" type="date" name="nacimiento" min="1900" placeholder="mm/dd/yyyy"  required>
+                  </div>
+                  <div class="fecha-register">
+                  <input class="input-register img-icon-calendar" type="date" name="nacimiento" min="1900" placeholder="mm/dd/yyyy"  required>
                   <span class="error-message-register">Debes ingresar tu fecha de nacimien</span>
+                   </div>
                    
-                  <input class="input-register" type="text" name="nombre" id="name" placeholder="Domicilio" required >
+                  <input class="input-register " type="text" name="nombre" id="name" placeholder="Domicilio" required >
                   <span class="error-message-register">Debes ingresar tu domicilio</span>
-                  
+
+                  </div>
+
+                  <div class="h3-register">
                   <h3>Perfil de usuario</h3>
+                  </div>
+
                      <div class="perfil-usuario">
                          <label for="cv">Comprador</label>
                              <input type="radio" name="cv" value="c"> 
                          <label for="cv">Vendedor</label>
                              <input type="radio" name="cv" value="v">
                      </div> 
-                     
-                        <ul>
-                            <h3>Categorías de interés (puede elegir más de una)</h3>
-                           <li><input type="checkbox" name="categoria" value="1" id="">Electro</li>
-                            <li><input type="checkbox" name="categoria" value="2" id="">Moda</li>
-                            <li><input type="checkbox" name="categoria" value="3" id="">Hogar</li>
-                            <li><input type="checkbox" name="categoria" value="4" id="">Juguetería</li>
-                            <li><input type="checkbox" name="categoria" value="5" id="">Vida sana</li>
+
+                     <div class="h3-register">
+                     <h3>Categorías de interés</h3>
+                     </div>
+                        <div class="input-categorias">
+                        <ul class="li-categorias">  
+                           <li><input class="input-categorias-register" type="checkbox" name="categoria" value="1" id="">Electro</li>
+                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="2" id="">Moda</li>
+                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="3" id="">Hogar</li>
+                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="4" id="">Juguetería</li>
+                            <li><input class="input-categorias-register" type="checkbox" name="categoria" value="5" id="">Vida sana</li>
                         </ul>
+                         </div>
 
                               <div class="foto-usuario-register">
                                 <i class="fas fa-user-edit"></i>
@@ -118,7 +130,7 @@
                                <div class="borrar-register">
                               <button type="reset" value="Borrar" class="registrarse">Borrar</button>
                                </div>
-     </div>
+                 </div>
    </form>
   </main>
 

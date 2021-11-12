@@ -1,0 +1,88 @@
+/*cuerpo principal (main)*/
+.main-register{
+
+
+}
+
+/*caja principal del register*/
+.caja-1{
+    height:1050px ;
+    border: black solid;
+    display: flex;
+    flex-direction: column;
+}
+/*span invisible*/
+.error-message-register{
+    display: none;
+}
+
+/*letras de inputs*/
+.input-register{
+    color: var(--gris-oscuro);
+    font-weight: bold;
+    width: 90%;
+    height: 32px;
+    margin: 20px 0px 15px 0px;
+    border: solid white;
+    border-radius: 5px 5px  5px 5px;
+}
+/*h3 titulos*/
+.caja-1 h3{
+    font-size: 16px;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 90%;
+}
+.h3-register{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+/*sub caja de inputs*/
+.input-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*fecha de nacimiento*/
+.fecha-register{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.img-icon-calendar{ //queria agregar el icono del
+     calendario con una imagen pero tengo problemas con la funcion de la ruta en app.js
+    background-image: url(./images/calendar_icon.png);
+    border: solid red;
+}*/
+ /*Perfil de usuario comprador/vendedor */
+.perfil-usuario{
+    width: 90%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin: 10px 10px 10px 10px;
+}
+/*categoria de interes*/
+.li-categorias{
+    width: 90%; 
+}
+
+.input-categorias{
+  border: solid rgb(255, 228, 110);
+  width: 100%; 
+  display: flex;  
+  justify-content: space-evenly;
+}
+/*espaciado de li*/
+
+.li-categorias li{
+    margin:20px 5px 20px 5px ;
+}
