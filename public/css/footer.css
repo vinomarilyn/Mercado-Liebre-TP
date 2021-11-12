@@ -32,3 +32,28 @@
     height: 55px;
 
 }
+.copy-footer-2{
+    display: none;
+}
+
+/*desktop-footer*/
+@media (min-width: 1010px){
+
+    .footer-general .copy-footer-1{
+        display: none;
+    }
+
+    .copy-footer-2{
+        display: flex;
+        padding: 5px;
+    }
+    /*direccionar las tres cajas*/
+    .footer-sub-general{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+
+}
