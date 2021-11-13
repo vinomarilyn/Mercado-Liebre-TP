@@ -69,6 +69,10 @@
    background-color: var(--celeste);
    border-radius: 3px 3px  3px 3px;
 }
+.enviar-login .login-enviar:hover{
+    background-color: #0022aa;
+}
+
 
 .enviar-login .login-enviar a{
    color: white;
