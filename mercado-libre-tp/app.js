@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 /* ENRUTADORES (agregamos una variable) */
 var indexRouter = require('./routes/indexRouter');
-var usersRouter = require('./routes/usersRouter');//(paso 1: crear la var) linea modificada
+var usersRouter = require('./routes/usersRouter');//(paso 1: definimos/crear la variable)
 
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));// nos define donde esta
 
 /* MIDDLEWARES DE RUTAS (establecemos una ruta)*/
 app.use('/', indexRouter);
-app.use('/', usersRouter);// (paso 2: "" )ruta definida 
+app.use('/', usersRouter);// (paso 2: "" ) + el nombre del archivo en la carpeta router
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
