@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %> 
+
+<body>
+    <%- include('partials/header.ejs') %> 
+
+<main class="main-register">
+    <form action="">
+         
+               <div class="login-caja-1"> 
+                       <div class="login-caja-2">
+                  <input class="input-login" type="text" name="usuario" id="name" placeholder="Nombre de usuario" required >
+                  <span class="error-message-login">Debes ingresar tu nombre de usuario</span>
+    
+                     <input class="input-login" type="password"  name="pass" id="pass" placeholder="Contraseña" required >
+                     <span class="error-message-register">Debes ingresar una contraseña</span>
+                      </div>
+                            <div class="enviar-login">
+                                  <button type="submit" value="enviar" class="login-enviar">
+                                      <a href="/">Registrarse</a> 
+                                 </button>
+                            </div>
+               </div>
+   </form>
+  </main>
+  
+  <%- include('partials/footer.ejs') %> 
+
+</body>
+</html>

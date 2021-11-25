@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head.ejs') %> 
+<body>
+    <%- include('partials/header.ejs') %> 
+
+ <main class="main-register">
+         <form action="">
+         
+               <div class="caja-1">
+                   <div class="input-general">
+
+                  <input class="input-register" type="text" name="nombre" id="name" placeholder="Nombre y apellido" required >
+                  <span class="error-message-register">Debes ingresar tu nombre y apellido</span>
+      
+                  <input class="input-register" type="text" name="usuario" id="name" placeholder="Nombre de usuario" required >
+                  <span class="error-message-register">Debes ingresar un nombre de usuario</span>
+                 
+                  <input class="input-register" type="email" name="email" id="email" placeholder="E-mail"  required >
+                  <span class="error-message-register">Debes ingresar tu email</span>
+
+                  <div class="h3-register">
+                  <h3>Fecha de nacimiento</h3>
+                  </div>
+                  <div class="fecha-register">
+                  <input class="input-register img-icon-calendar" type="date" name="nacimiento" min="1900" placeholder="mm/dd/yyyy"  required>
+                  <span class="error-message-register">Debes ingresar tu fecha de nacimien</span>
+                   </div>
+                   
+                  <input class="input-register " type="text" name="nombre" id="name" placeholder="Domicilio" required >
+                  <span class="error-message-register">Debes ingresar tu domicilio</span>
+
+                  </div>
+
+                  <div class="h3-register">
+                  <h3>Perfil de usuario</h3>
+                  </div>
+
+                     <div class="perfil-usuario">
+
+                          <div class="perfil-usuario-div">
+                         <label for="cv">Comprador</label>
+                             <input type="radio" name="cv" value="c"> 
+                            </div>
+
+                            <div class="perfil-usuario-div">
+                         <label for="cv">Vendedor</label>
+                             <input type="radio" name="cv" value="v">
+                            </div>
+
+                     </div> 
+
+                     <div class="h3-register">
+                     <h3>Categorías de interés</h3>
+                     </div>
+                        <div class="input-categorias">
+                        <ul class="li-categorias">  
+                            <div class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="1" id=""><li>Electro</li>
+                           </div>
+                           
+                           <div class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="2" id=""> <li>Moda</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="3" id=""> <li>Hogar</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                           <input class="input-categorias-register" type="checkbox" name="categoria" value="4" id=""> <li>Juguetería</li>
+                           </div>
+
+                           <div  class="li-categorias-div">
+                            <input class="input-categorias-register" type="checkbox" name="categoria" value="5" id=""><li>Vida sana</li>
+                           </div>
+
+                        </ul>
+                         </div>
+
+                              <div class="foto-usuario-register">
+                                <i class="fas fa-user-edit"></i>
+                              </div>
+                             
+                              <div class="input-register-2">
+                             
+                     <input class="input-register" type="password"  name="pass" id="pass" placeholder="Contraseña" required >
+                     <span class="error-message-register">Debes ingresar una contraseña</span>
+
+                     <input class="input-register" type="password"  name="pass" id="pass" placeholder="Confirmar contraseña" required >
+                     <span class="error-message-register">Debes confirmar tu contraseña</span>
+                      
+                              </div>
+                              
+                            <div class="enviar-register">
+                                  <button type="submit" value="enviar" class="registrarse">
+                                      <a href="/">Registrarse</a> 
+                                 </button>
+                            </div>
+       
+                               <div class="borrar-register">
+                              <button type="reset" value="Borrar" class="registrarse">Borrar</button>
+                               </div>
+                 </div>
+   </form>
+  </main>
+
+  <%- include('partials/footer.ejs') %> 
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.footer-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.footer-sub-general{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-article i {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--celeste);
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+.footer-article h3{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-article p{
+    width: 250px;
+    height: 55px;
+
+}
+.copy-footer-2{
+    display: none;
+}
+
+/*desktop-footer*/
+@media (min-width: 1010px){
+
+    .footer-general .copy-footer-1{
+        display: none;
+    }
+
+    .copy-footer-2{
+        display: flex;
+        padding: 5px;
+    }
+    /*direccionar las tres cajas*/
+    .footer-sub-general{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+
+}

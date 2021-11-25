@@ -1,0 +1,42 @@
+@import url('header.css');
+@import url('home.css');
+@import url('login.css');
+@import url('register.css');
+@import url('footer.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontText);
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.979);
+
+} 
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* variables */
+:root {
+    /* Colors */
+    --amarillo: #EAC926;
+    --azul:  #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+
+    /* Fonts */
+    --fontText: 'Roboto', sans-serif;
+}
+html {
+    font-size: 12px;
+}
