@@ -24,6 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')));// nos define donde esta
 app.use('/', indexRouter);
 app.use('/', usersRouter);// (paso 2: "" ) + el nombre del archivo en la carpeta router
 
+
+app.use(express.static('public'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
