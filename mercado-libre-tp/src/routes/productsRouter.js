@@ -1,0 +1,28 @@
+// ************ Require's ************
+const express = require('express');
+const router = express.Router();
+
+// ************ Controller Require ************
+const productsController = require('../controllers/productsController');
+
+/*** GET ALL PRODUCTS ***/ 
+router.get('/', productsController.index); 
+
+/*** CREATE ONE PRODUCT ***/ 
+router.get('/create/', productsController.create); 
+router.post('/', productsController.store); 
+
+
+/***GET ONE PRODUCT detalles de PRODUCTO :ID ***/ 
+router.get('/detail/:id/', productsController.detail); /**PASO 1: DEFINIMOS LA RUTA */
+
+/*** EDIT ONE PRODUCT ***/ 
+router.get('/:id/edit', productsController.edit); 
+router.put('/:id', productsController.update);
+
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/:id', productsController.destroy); 
+
+
+module.exports = router;

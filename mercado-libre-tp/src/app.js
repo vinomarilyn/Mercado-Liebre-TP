@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));// nos define donde estamos parados
+//app.use(methodOverride('_method'));
 
 /* MIDDLEWARES DE RUTAS (establecemos una ruta)*/
 app.use('/', indexRouter);
