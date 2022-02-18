@@ -1,11 +1,14 @@
 <header>
     <div class="contenedor-general-header" >
-           <img src="images/logo-mercado-liebre.svg" alt="logo ml">
+        <div class="contenedor-header">
+           <img src="images/logo-mercado-liebre.svg" alt="logo ml"> 
                   <div class="buscador-header">
-                 <input type="text" name="buscador" id="busqueda" placeholder=" Buscar productos, marcas"
-                    required />
-                   <i class="fas fa-search"></i>
+                     <form action="/search" method="GET" class="search-form">
+                     <input type="text" name="buscador" id="busqueda" placeholder=" Buscar productos, marcas"/>
+                     <button type="submit" class="buscador-header-btn" ><i class="fas fa-search"></i> </button> 
+                     </form>
                    </div>
+         </div>
                    <div class="mano-tablet">
                    <i id="mano-tablet-icon" class="fas fa-hand-holding-usd"></i>
                    <p>  Comprá en cuotas y sin tarjeta de crédito</p>

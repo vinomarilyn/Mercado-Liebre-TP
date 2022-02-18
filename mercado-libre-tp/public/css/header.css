@@ -2,6 +2,23 @@ header {
     background-color: var(--amarillo);
 }
 
+/* .contenedor-general-header{
+
+} */
+/*contenedor de imagen y buscador header*/
+.contenedor-header{
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+/*logo*/
+.contenedor-header img{
+    width: 50%;
+    height: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
 .contenedor-header1 a{
     color: black;
 }
@@ -12,21 +29,53 @@ header {
 
 .buscador-header{
     display: flex;
-    flex-direction: column;
-    width: 170px;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
 }
+/*campo del buscador*/
+.search-form{
+    display: flex;
+    flex-direction: row;
+    height: 3.5rem;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+} /*define el tamaño del buscador input y button */
+.search-form input{
+    border-radius:4px 0px  0px 4px ; 
+    width: 90%;
+    height: 80%;
+}
+/*lupa de busqueda*/
+.buscador-header-btn{
+    height: 80%;
+    background-color:white;
+    border: none;
+    border-radius:0px 4px 4px 0px;
+    
+}
+/*icono de la lupa*/
+.buscador-header-btn i{
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.5rem;
 
-.contenedor-general-header{
+}
+  /*contenedor de icon de compras movil*/
+
+/* .contenedor-general-header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    border: solid rgb(93, 230, 100);
 }
 .payment-header{
     display: flex;
     justify-content: center;
-}
-
+} */
+/* 
 .contenedor-general-header i{
     background-color: var(--gris-claro);
     border: solid black ;
@@ -54,10 +103,10 @@ header {
     align-items: center;
 
 }
-
+ */
 /* mobiel */
 @media (min-width: 320px){
-        header{
+        /* header{
         height: 200px;
         display: flex;
         flex-wrap: wrap;
@@ -120,14 +169,16 @@ header {
 
     .mano-tablet{
         display: none;
-    }     
+    }  */    
 
 
 }
  /*TABLET*/
 @media (min-width: 760px){
-
-    header{
+    .header-mano{
+        display: none;
+    }
+   /*  header{
         justify-content: space-between;
         height: 180px;
     }
@@ -147,11 +198,6 @@ header {
         margin-top: 0px;
         align-items: flex-start;
 
-    }
-
-
-    .header-mano{
-        display: none;
     }
 
     .contenedor-general-header img{
@@ -204,7 +250,7 @@ header {
     .contenedor-header2 {
         margin-bottom: 0px;
         margin-left: 15px;
-    }
+    } */
 
 }
  /*DESKTOP*/

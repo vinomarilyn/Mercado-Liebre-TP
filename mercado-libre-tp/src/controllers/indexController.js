@@ -16,6 +16,7 @@ const controller = {
                       productsInSale,
 	                   	productsVisited,
                       products,
+                      title:"",
 	                		toThousand
                     })//render nos permite ver la pagina
       },

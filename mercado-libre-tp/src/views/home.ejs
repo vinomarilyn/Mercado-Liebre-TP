@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head.ejs', {title: 'Inicio'}) %> 
+<%- include('./partials/head.ejs', {title: 'Mercado liebre'}) %> 
 <body>
     
     <%- include('partials/header.ejs') %> 
@@ -19,7 +19,7 @@
                     <img src="/images/products/<%- product.image %>" alt="imagen de producto">
                  <i class="fas fa-truck"></i>
                 <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
-               <p><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </p>
+               <p><%- product.discount > 0 ? `${product.discount}% OFF` : "" %> </p>
              <h5 class="h5-descripcion-main"><%- product.name %></h5> 
              </a>
              </article>
@@ -32,14 +32,15 @@
             
             <% productsInSale.forEach(product => { %>
               <div class="main-contenedor-productos-2">
-               <a href="/products/detail/<%- product.id %>">
-               <article class="descripcion-main" >
-               <img src="/images/products/<%- product.image %>" alt="imagen de producto">
-            <i class="fas fa-truck"></i>
-           <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
-          <p><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </p>
-           <h5 class="h5-descripcion-main"><%- product.name %></h5>
-            </a>
+                  <a href="/products/detail/<%- product.id %>">
+                        <article class="descripcion-main" >
+                                <img src="/images/products/<%- product.image %>" alt="imagen de producto">
+                                
+                             <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
+                             <p> <%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </p>
+                          <h5 class="h5-descripcion-main"><%- product.name %></h5>
+                             <i class="fas fa-truck"></i>
+                        </a>
            </article>
            </div>
            <% }) %>
