@@ -4,27 +4,33 @@
 <body>
     
     <%- include('partials/header.ejs') %> 
-    <main>
+    <main >
         <div><img src="images/img-home-banner.jpg" width="100%" alt="imagenes con ofertas"></div>
 
-        <section>
+        <section class="section-home">
              <!-- last visits -->
             <h2 class="titulo-main"><strong>Basado en tu última visita</strong></h2>
             <!-- Show the "visited" products -->
 
-            <% productsVisited.forEach(product => { %>
-                   <div class="main-contenedor-productos">
-                    <a href="/products/detail/<%- product.id %>">
+              <% for( var i = 0; i < 3; i++ ) { %>
+                 <div class="main-contenedor-productos">
+                    <a href="/products/detail/<%- productsVisited[i].id %>">
                     <article class="descripcion-main" >
-                    <img src="/images/products/<%- product.image %>" alt="imagen de producto">
-                 <i class="fas fa-truck"></i>
-                <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
-               <p><%- product.discount > 0 ? `${product.discount}% OFF` : "" %> </p>
-             <h5 class="h5-descripcion-main"><%- product.name %></h5> 
-             </a>
-             </article>
+                    <figure>
+                      <img src="/images/<%- productsVisited[i].image  %>" alt="imagen de producto">
+                    </figure>
+                      <i class="fas fa-truck"></i>
+              <div class="product-detail-info">
+              <p> <%- toThousand(productsVisited[i].price - productsVisited[i].price * productsVisited[i].discount / 100) %> </p> 
+               <p><%- productsVisited[i].discount > 0 ? `${productsVisited[i].discount}% OFF` : "" %> </p>
              </div>
-            <% }) %>
+               <h5 class="h5-descripcion-main"><%- productsVisited[i].name %></h5> 
+            
+             </article>
+              </a>
+             </div>
+             <% } %>
+            
         </section>
 
         <section>
@@ -34,15 +40,16 @@
               <div class="main-contenedor-productos-2">
                   <a href="/products/detail/<%- product.id %>">
                         <article class="descripcion-main" >
-                                <img src="/images/products/<%- product.image %>" alt="imagen de producto">
+                                <img src="/images/<%- product.image %>" alt="imagen de producto">
                                 
                              <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
                              <p> <%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </p>
                           <h5 class="h5-descripcion-main"><%- product.name %></h5>
                              <i class="fas fa-truck"></i>
-                        </a>
-           </article>
-           </div>
+                        
+                      </article>
+                  </a>
+          </div>
            <% }) %>
         </section>
         
