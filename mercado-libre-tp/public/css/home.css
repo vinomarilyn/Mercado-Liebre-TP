@@ -10,23 +10,25 @@ main{
     font-weight: 400;
 } 
 /*img products all*/
-.figure {
-    
-    padding: 0;
-    border-bottom: 1px solid var(--gris-claro);
-    width: 70%;
-    display: block;
-    margin: auto;
-
-  }
-  
-.img {
-    width: 100%;
-  }
 
 .product-detail-img {
- 
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid var(--gris-claro);
+    display: block;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }  
+  .product-detail-img img{
+    width: 85%;
+    height: 70%;
+  }
+
+
 /*card products*/
 .main-contenedor-productos{
     background-color: #ffffff;
@@ -34,18 +36,52 @@ main{
     overflow: hidden;
     transition: 300ms;
     margin: 20px 0;
-    border: solid red;
     display: block;
+    height: 30rem;
+    width: 24rem;
+    box-shadow: rgba(0, 0, 0, 4) 0.1rem 0.1rem 0.2rem;
 }
 /*a con el display block*/
 .main-contenedor-productos a{
     display: block;
 }
-/*section main*/
+/*section main-1 contenedor*/
 .section-home{
-   margin-left: 0.5rem;
-   margin-right: 0.5rem; 
+   margin-left: 1rem;
+   margin-right: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
+/*icon de compra*/
+.icon-home-main{
+   display: flex;
+   justify-content: end;
+   height: 2rem;
+}
+
+.icon-home-main i{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--verde);
+    width: 3rem;
+    height: 3rem;
+    border-radius:  50%;
+    background-color: #fff;
+    color: var(--verde);
+    position: relative;
+    top:-2rem;
+   transition: 1s;
+
+}
+.icon-home-main i:hover{
+    transform: rotate(360deg);
+}
+
+
 
 /*etiqueta h5 del producto card*/
 .descripcion-main h5{
@@ -62,27 +98,24 @@ main{
  
 
   
-  .product-detail-info {
+.product-detail-info {
     border-left: 1px solid var(--light-gray);
     padding: 15px;
     height: 100%;
+    display: flex;
   }
-  
+ /*precio y descuento*/
+.product-detail-info p {
+    border: solid #fff;
+    position: relative;
+    top: -1rem;
+    
+
+ } 
+
 /*
 
 
-.descripcion-main i{
-    display: block;
-    font-size: 16px;
-    border: 1px solid var(--verde);
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border-radius:  50%;
-    background-color: #fff;
-    color: var(--verde);
-
-}
 
 */
 /*descripción oculta*/
