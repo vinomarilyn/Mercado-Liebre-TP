@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head.ejs', {title: 'Mercado liebre'}) %> 
-<body>
-    
-    <%- include('partials/header.ejs') %> 
-    <main >
-        <div><img src="images/img-home-banner.jpg" width="100%" alt="imagenes con ofertas"></div>
+  <%- include('./partials/head.ejs', {title: 'Mercado liebre'}) %>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <main>
+      <div>
+        <img
+          src="images/img-home-banner.jpg"
+          width="100%"
+          alt="imagenes con ofertas"
+        />
+      </div>
 
-        <section class="section-home">
-             <!-- last visits -->
-            <h2 class="titulo-main"><strong>Basado en tu última visita</strong></h2>
-            <!-- Show the "visited" products -->
+      <section class="section-home">
+        <!-- last visits -->
+        <h2 class="titulo-main"><strong>Basado en tu última visita</strong></h2>
+        <!-- Show the "visited" products -->
 
-              <% for( var i = 0; i < 3; i++ ) { %>
-                 <div class="main-contenedor-productos">
-                    <a href="/products/detail/<%- productsVisited[i].id %>">
-                    <article class="descripcion-main" >
-                    <figure class="product-detail-img">
-                      <img src="/images/<%- productsVisited[i].image  %>" alt="imagen de producto">
-                    </figure>
-                     <div class="icon-home-main">
-                    <i class="fas fa-truck"></i>
-                    </div>
+        <% for( var i = 0; i < 3; i++ ) { %>
+        <div class="main-contenedor-productos">
+          <a href="/products/detail/<%- productsVisited[i].id %>">
+            <article class="descripcion-main">
+              <figure class="product-detail-img">
+                <img
+                  src="/images/<%- productsVisited[i].image  %>"
+                  alt="imagen de producto"
+                />
+              </figure>
+              <div class="icon-home-main">
+                <i class="fas fa-truck"></i>
+              </div>
               <div class="product-detail-info">
-              <p> <%- toThousand(productsVisited[i].price - productsVisited[i].price * productsVisited[i].discount / 100) %> </p> 
-               <p><%- productsVisited[i].discount > 0 ? `${productsVisited[i].discount}% OFF` : "" %> </p>
-             </div>
-               <h5 class="h5-descripcion-main">
-                 <%- productsVisited[i].name %>
-                </h5> 
-            
-             </article>
-              </a>
-             </div>
-             <% } %>
-            
-        </section>
+                <div class="product-detail-info-1">
+                  <p class="product-detail-info-p">
+                    $<%- toThousand(productsVisited[i].price -
+                    productsVisited[i].price * productsVisited[i].discount /
+                    100) %>
+                  </p>
+                </div>
+                <div class="product-detail-info-2">
+                  <p class="product-detail-info-p">
+                    <%- productsVisited[i].discount > 0 ?
+                    `${productsVisited[i].discount}% OFF` : "" %>
+                  </p>
+                </div>
+              </div>
+              <h5 class="h5-descripcion-main">
+                <%- productsVisited[i].name %>
+              </h5>
+            </article>
+          </a>
+        </div>
+        <% } %>
+      </section>
 
-        <section class="section-home">
-            <h2 class="titulo-main"><strong>Sección de Ofertas</strong></h2>
-            
-            <% productsInSale.forEach(product => { %>
-              <div class="main-contenedor-productos">
-                  <a href="/products/detail/<%- product.id %>">
-                        <article class="descripcion-main" >
-                              <figure class="product-detail-img">
-                          <img src="/images/<%- product.image %>" alt="imagen de producto">
-                              </figure> 
-                              <div class="icon-home-main">
-                                <i class="fas fa-truck"></i>
-                              </div>
-                          <div class="product-detail-info">    
-                             <p> <%- toThousand(product.price - product.price * product.discount / 100) %> </p> 
-                             <p> <%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </p>
-                          </div>
-                             <h5 class="h5-descripcion-main"><%- product.name %></h5>                        
-                      </article>
-                  </a>
-          </div>
-           <% }) %>
-        </section>
-        
-      </main>
-      <%- include('./partials/footer.ejs') %> 
-</body>
-</html> <!--
+      <section class="section-home">
+        <h2 class="titulo-main"><strong>Sección de Ofertas</strong></h2>
+
+        <% productsInSale.forEach(product => { %>
+        <div class="main-contenedor-productos">
+          <a href="/products/detail/<%- product.id %>">
+            <article class="descripcion-main">
+              <figure class="product-detail-img">
+                <img
+                  src="/images/<%- product.image %>"
+                  alt="imagen de producto"
+                />
+              </figure>
+              <div class="icon-home-main">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="product-detail-info">
+                <div class="product-detail-info-1">
+                  <p>
+                    <%- toThousand(product.price - product.price *
+                    product.discount / 100) %>
+                  </p>
+                </div>
+                <div class="product-detail-info-2">
+                  <p>
+                    <%- product.discount !== 0 ? `${product.discount}% OFF` : ""
+                    %>
+                  </p>
+                </div>
+              </div>
+              <h5 class="h5-descripcion-main"><%- product.name %></h5>
+            </article>
+          </a>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
+<!--
 "-->
