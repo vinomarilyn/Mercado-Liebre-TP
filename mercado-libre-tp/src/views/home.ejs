@@ -40,7 +40,7 @@
                 </div>
                 <div class="product-detail-info-2">
                   <p class="product-detail-info-p">
-                    <%- productsVisited[i].discount > 0 ?
+                   <%- productsVisited[i].discount > 0 ?
                     `${productsVisited[i].discount}% OFF` : "" %>
                   </p>
                 </div>
@@ -73,7 +73,7 @@
               <div class="product-detail-info">
                 <div class="product-detail-info-1">
                   <p>
-                    <%- toThousand(product.price - product.price *
+                    $<%- toThousand(product.price - product.price *
                     product.discount / 100) %>
                   </p>
                 </div>
