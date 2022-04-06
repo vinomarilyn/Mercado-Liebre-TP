@@ -1,41 +1,47 @@
-«<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Todos los productos'}) %>
 <body>
-	<!-- Header -->
 	<%- include('partials/header') %>
-	<!-- /Header -->
-
 	<!-- todos los productos -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Todos los productos</h2>
-			</div>
-		
+	<main class="container-products">
+		<h2 class="titulo-productos"><strong>Todos los productos</strong></h2>
+			<section class="container-products-all">
+
+				<!-- Show the "visited" products -->
 			
-			<% products.forEach(product => { %>
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="/products/detail/<%- product.id %>">
-							<figure class="product-box_image">
-								<img src="/images/products/<%- product.image %>" alt="imagen de producto">
-							</figure>
-							<article class="product-box_data">
-								<h2><%- toThousand(product.price - product.price * product.discount / 100) %></h2>
-								<span><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %> </span>
-								<p><%- product.name %></p>
-								<i class="fas fa-truck"></i>
-							</article>
-						</a>
-					</section>
+			<% productos.forEach(product => { %>
+				
+			<a href="/products/detail/<%- product.id %>">
+				<article class="card-producto">
+				<figure class="card-image">
+					 <img
+				    src="/images/<%- product.image %>"
+					alt="imagen de producto"
+					 />
+				</figure>
+				<div class="icon-home-main">
+				<i class="fas fa-truck"></i>
 				</div>
+				<div class="detail-info-box">
+				<div class="detail-info-1">
+				<p class="detail-info-p">
+$<%- toThousand(product.price - product.price * product.discount / 100) %>
+				</p>
+				</div>
+				<div class="detail-info-2">
+					<p class="">
+					<%- product.discount !== 0 ? `${product.discount}% OFF` : "" %>
+					</p>
+				</div>
+				</div>
+	<h5 class=""><%= product.name %></h5>
+			 </article>
+		</a>
 			 <% }) %>
-		
-		</div>
-	</div>
-	<!-- /todos los productos -->
+			</section>
+		</main>
 
 	<!-- footer -->
 	<%- include('partials/footer') %>

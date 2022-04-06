@@ -1,16 +1,23 @@
-let { getProducts, writeJson } = require('../data/DataBase');
-let products = getProducts;
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');// RESUMEN DE LA RUTA
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//lee json y lo pasa a javascrip base de datos parceada
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
 	// Root - Show all products
         	index: (req, res) => {
-	        	res.render('products', {
-      			products,
-	    		title:"",
-     			toThousand
-	    	})
+let productos = products.filter(product => product) 
+		
+	     res.render('products', {
+		 productos,
+		 products,
+	     title:"Todos los productos",
+     	 toThousand
+	    	}) 
     	},
 
 	// Detail - Detail from one product PASO 2. DEFINIMOS LOS PARAMETROS 
