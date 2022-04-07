@@ -1,15 +1,21 @@
 /*cuerpo principal (main)*/
-.main-register{
+.main-login{
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*caja principal del register */
 .login-caja-1{
-    display: flex;
-    flex-direction: column;
-    
-    
+    height: 21rem;
+    width: 90%;
+    height: 20rem;
+    border-radius: 5px;
+   /*  background-color: #ffffff; */
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 4) 0.1rem 0.1rem 0.2rem;
 }
 .login-caja-2{
     display: flex;
@@ -77,4 +83,27 @@
 .enviar-login .login-enviar a{
    color: white;
    font-weight: 600;
+}
+
+  /*box general*/
+  /* mobile */
+  @media (min-width: 420px){
+    /*contenedor general de las cards de producto*/ 
+    .login-caja-1{
+        width: 75%;
+       
+        }
+}
+@media (min-width: 760px){
+    /*contenedor general de las cards de producto*/ 
+     .login-caja-1{
+            width: 70%;
+           
+            }
+}
+@media (min-width: 1010px){
+    .login-caja-1{
+        width: 50%;
+       
+        }
 }

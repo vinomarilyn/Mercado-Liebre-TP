@@ -5,10 +5,10 @@
 <body>
     <%- include('./partials/header.ejs') %> 
 
-<main class="main-register">
-    <form action="">
-         
+<main class="main-login">
+        
                <div class="login-caja-1"> 
+                   <form action="">
                        <div class="login-caja-2">
                   <input class="input-login" type="text" name="usuario" id="name" placeholder="Nombre de usuario" required >
                   <span class="error-message-login">Debes ingresar tu nombre de usuario</span>
@@ -20,9 +20,10 @@
                                   <button type="submit" value="enviar" class="login-enviar">
                                       <a href="/">Registrarse</a> 
                                  </button>
-                            </div>
-               </div>
-   </form>
+                          </div>
+               </form>   
+        </div>
+
   </main>
   
   <%- include('./partials/footer.ejs') %> 

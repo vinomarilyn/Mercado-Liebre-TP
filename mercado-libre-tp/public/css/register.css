@@ -1,14 +1,20 @@
 /*cuerpo principal (main)*/
 .main-register{
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*caja principal del register*/
 .caja-1{
-    display: flex;
-    flex-direction: column;
-  
+    width: 90%;
+    border-radius: 5px;
+   /*  background-color: #ffffff; */
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 4) 0.1rem 0.1rem 0.2rem;
+
 }
 /*span invisible*/
 .error-message-register{
@@ -168,4 +174,25 @@
     color: white;
     font-weight: 600;
 }
-
+  /*box general*/
+  /* mobile */
+  @media (min-width: 420px){
+    /*contenedor general de las cards de producto*/ 
+    .caja-1{
+        width: 75%;
+       
+        }
+}
+@media (min-width: 760px){
+    /*contenedor general de las cards de producto*/ 
+     .caja-1{
+            width: 70%;
+           
+            }
+}
+@media (min-width: 1010px){
+    .caja-1{
+        width: 50%;
+       
+        }
+}
