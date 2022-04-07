@@ -1,0 +1,108 @@
+.create-product{
+    width: 90%;
+    height: 42rem; /*medida del form*/
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 4) 0.1rem 0.1rem 0.2rem;
+}
+  /*box general*/
+.create-product-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 52rem;
+    background-color: var(--gris-claro);
+  }
+   /*nombre del formulario*/
+    
+.container-create-h2{
+      height: 4rem;
+       display: flex;
+       justify-content: center;
+       margin:1rem 1rem 1rem 1rem;
+   } /*inputs del form*/
+.create-intups{
+    height: 3.2rem;
+     margin:1rem 1rem 1rem 1rem;
+     display: flex;
+     justify-content: space-between;
+   } /*letras del label*/
+.create-intups label{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+}
+.create-description{
+     margin:1rem 1rem 1rem 1rem; 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 12rem;
+    
+}
+.form-input-description{
+    border: solid black 0.5px;
+    border-radius: 5px;
+    height: 12rem;
+    width: 90%;
+
+}
+/*button guardar producto*/
+.create-button{
+    display: flex; 
+    justify-content: center;
+}
+.create-button button{
+    border: solid var(--celeste); 
+    width: 90%;
+    height: 32px;
+    background-color: var(--celeste);
+    border-radius: 3px 3px  3px 3px;
+ }
+  /*box general*/
+  /* mobile */
+  @media (min-width: 420px){
+    /*contenedor general de las cards de producto*/ 
+    .create-product{
+       width: 75%;
+    
+    }
+    /*inputs del form*/
+    .create-intups{
+    height: 3.2rem;
+     width: 90%;
+     display: flex;
+     justify-content: space-between;
+   
+   }
+   .form-input{
+       width: 55%;
+   }
+
+}
+@media (min-width: 760px){
+    /*contenedor general de las cards de producto*/ 
+    .create-product{
+        width: 70%;
+        }
+        
+}
+@media (min-width: 1010px){
+    .create-product{
+        width: 60%;
+       
+        }
+
+     /*inputs del form*/
+     .create-intups{
+         width: 70%;
+         display: flex;
+         justify-content: space-between;
+         margin-left: 3rem;
+       }
+       .form-input{
+           width: 60%;
+       }
+}

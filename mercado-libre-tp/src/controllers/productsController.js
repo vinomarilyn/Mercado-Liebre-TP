@@ -15,7 +15,7 @@ let productos = products.filter(product => product)
 	     res.render('products', {
 		 productos,
 		 products,
-	     title:"Todos los productos",
+	     title:"",
      	 toThousand
 	    	}) 
     	},
@@ -33,23 +33,33 @@ let productos = products.filter(product => product)
 
 		})
 	},
-
-	// Create - Form to create
+   // ruta http://localhost:3005/products/create
+	// /create - Form to create
 	create: (req, res) => {
 		res.render('product-create-form',{
 			title:""
 		})
 	},
 	
-         	// Create -  Method to store
-	           store: (req, res) => {
-	        //	const { name, price, discount, category, description } = req.boby
-        
-                 res.send(req.boby)
-	
+     // Create -  Method to store redireccioa a la pagina de productos
+	 store: (req, res) => {
+	   //	const { name, price, discount, category, description } = req.boby
+       res.send(req.boby)
+    },
+	edit: (req, res) => {//http://localhost:3005/products//detail/2/edit
+		res.render('product-edit-form',{
+			title:""
+		})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		// Do the magic
+	},
 
-            	},
-			
+	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+		// Do the magic
+	}		
 
 
 }
