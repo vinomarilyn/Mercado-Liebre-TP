@@ -27,6 +27,7 @@ let productos = products.filter(product => product)
 
 		res.render('detail', {
 			product,
+			products,
 			toThousand,
 			title:""
 

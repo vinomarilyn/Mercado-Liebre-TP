@@ -5,69 +5,79 @@
 <body>
 	<!-- Header -->
 	<%- include('partials/header') %>
-	<!-- /Header -->
-
 	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%- product.name %>  </h2>
-			</div>
+	<main class="container-detail-main">
+	<div class="container-detail">
+		<div class="container-detail-h2">
+			
+		  <h2 class="products-title">Detalle del producto: <%- product.name %></h2>
+			
 		</div>
 		<div class="product-detail">
-			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/images/products/ <%- product.image %>" alt="product image" class="product-detail-img">
-					<p class="product-detail-description">
+			
+				<div class="product-box-img">
+					<figure class="product-detail-img">
+					<img src="/images/<%- product.image %>" alt="product image" class="product-detail-img">
+					</figure>
+                    <div class="product-description">
+					<p >Caracteristicas: 
 						<%- product.description %>
 					</p>
+			     	</div>
 				</div>
-				<div class="col-12 col-lg-4">
+				
 					<article class="product-detail-info">
 						<h2 class="product-detail-title"> <%- product.name %></h2>
 						
 					     <% if (product.discount > 0) { %>
-							<p class="product-detail-price small">
-								<span>$ <%- toThousand(product.price) %></span>
-								/
-								<b> <%- product.discount %>% OFF</b>
-							</p>
-							<p class="product-detail-price">
-								$<%- toThousand(product.price - product.price * product.discount / 100) %>
-							</p>
-						 <% }else{ %>
+                           <div class="product-discount">	
+							<p >
+							Antes <span>$ <%- toThousand(product.price) %></span>
+							</p> 
+							<div class="product-detail-price">
+                             <h4 >
+							Ahora $ <%- toThousand(product.price - product.price * product.discount / 100) %> con el 
+							</h4>  
+							<b> <%- product.discount %>% OFF</b>
+							</div>
 
-							<p class="product-detail-price">
+                           </div>
+						 <% }else{ %>
+							<div class="product-detail-price">
+								<h4 >
 								$ <%- toThousand(product.price) %>
-							</p>
+							   </h4>  
+							</div>
 
 							<% } %>
 
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
+								<p> Pagá en 12 cuotas sin interes</p>
 							</li>
 							<li>
 								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
+								<p> Retiro gratis en locales del vendedor</p>
 							</li>
 						</ul>
+                         <div class="button-product-action">
 
 						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+						
 						<hr>
 
 						<a href="/products/edit/<%- product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
 						<form action="/products/delete/<%- product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
-					</article>
-				</div>
-			</div>
+
+				     	</div>
+					</article>	
 		</div>
 	</div>
 	<!-- /product detail -->
-
+    </main>
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
