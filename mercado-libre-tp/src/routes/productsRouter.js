@@ -9,20 +9,20 @@ var productsController = require('../controllers/productsController');
 router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productsController.create); 
-//router.post('/create', productsController.store); 
+router.get('/create/', productsController.create); 
+router.post('/', productsController.store); 
 
 
 /***GET ONE PRODUCT detalles de PRODUCTO :ID ***/ 
 router.get('/detail/:id/', productsController.detail); /**PASO 1: DEFINIMOS LA RUTA */
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/detail/:id/edit', productsController.edit); 
-//router.put('/detail/:id', productsController.update);
+router.get('/:id/edit', productsController.edit); 
+router.put('/:id', productsController.update);
 
 
 /*** DELETE ONE PRODUCT***/ 
-//router.delete('/detail/:id', productsController.destroy); 
+router.delete('/:id', productsController.destroy); 
 
 
 module.exports = router;

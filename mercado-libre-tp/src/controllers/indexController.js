@@ -20,7 +20,9 @@ const controller = {
 	                		toThousand
                     })//render nos permite ver la pagina
       },
-      
+  search:(req, res)=>{
+
+  }
  };
 
 module.exports = controller ;
