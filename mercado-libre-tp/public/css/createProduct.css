@@ -60,6 +60,8 @@
     height: 32px;
     background-color: var(--celeste);
     border-radius: 3px 3px  3px 3px;
+    font-size: 1.6em;
+    color: #ffffff;
  }
   /*box general*/
   /* mobile */

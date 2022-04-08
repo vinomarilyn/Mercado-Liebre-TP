@@ -7,6 +7,9 @@
 @import url('detail.css');
 @import url('createProduct.css');
 @import url('editProduct.css');
+@import url('bootstrap-grid.min.css');
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
 * {
     margin: 0;
